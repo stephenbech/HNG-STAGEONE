@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Web Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+            <img src="images\profilepicture.jpg" alt="Your Slack Username" data-testid="slackDisplayImage">
+            <h1 data-testid="slackUserName">Stephen Nzubechukwu</h1>
+        </div>
+        <div class="div2">
+            <h3 data-testid="myTrack">Frontend</h3>
+            <a href="https://github.com/yourusername/your-repo" data-testid="githubURL">GitHub Repository</a>
+            <p data-testid="currentDayOfTheWeek"></p>
+            <p data-testid="currentUTCTime"></p>
+            
+        </div>
+    </div>
+
+    <script>
+      // Function to get the current day of the week
+      function getCurrentDayOfTheWeek() {
+          const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+          const today = new Date();
+          const dayOfWeek = days[today.getDay()];
+          return dayOfWeek;
+      }
+  
+      // Function to get the current UTC time in milliseconds
+      function getCurrentUTCTime() {
+          const utcTime = new Date().getTime();
+          return utcTime;
+      }
+  
+      // Update the HTML elements with the data-testid attributes
+      document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = getCurrentDayOfTheWeek();
+      document.querySelector('[data-testid="currentUTCTime"]').textContent = getCurrentUTCTime();
+  </script>
+</body>
+</html>
