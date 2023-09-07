@@ -15,6 +15,14 @@ body {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       display: flex;
       justify-content: space-between;
+      transition: opacity 500ms ease-in-out 0s;
+
+      &:hover {
+        box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
+          rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+        transform: scale(1.05);
+        border-color: rgba(249, 249, 249, 0.8);
+      }
   }
   
   .div1,
@@ -37,6 +45,7 @@ body {
         height: auto;
       border-radius: 5%;
       margin: 10px auto;
+      
   }
 
   h3{
